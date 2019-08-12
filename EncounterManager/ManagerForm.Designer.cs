@@ -43,6 +43,7 @@
             this._exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._encounterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._rollInitiativeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rollAsGroupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._resetInitiativeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._resetHitPointsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._characterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,7 +63,6 @@
             this._slideDownBtn = new System.Windows.Forms.Button();
             this._rollInitiativeBtn = new System.Windows.Forms.Button();
             this._copyBtn = new System.Windows.Forms.Button();
-            this.rollAsGroupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._mainMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._dataGridViewManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.characterBindingSource)).BeginInit();
@@ -191,6 +191,13 @@
             this._rollInitiativeToolStripMenuItem.Text = "Roll Only Selected";
             this._rollInitiativeToolStripMenuItem.Click += new System.EventHandler(this._rollSelectedInitiativeToolStripMenuItem_Click);
             // 
+            // rollAsGroupToolStripMenuItem
+            // 
+            this.rollAsGroupToolStripMenuItem.Name = "rollAsGroupToolStripMenuItem";
+            this.rollAsGroupToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
+            this.rollAsGroupToolStripMenuItem.Text = "Roll As Group";
+            this.rollAsGroupToolStripMenuItem.Click += new System.EventHandler(this.rollAsGroupToolStripMenuItem_Click);
+            // 
             // _resetInitiativeToolStripMenuItem
             // 
             this._resetInitiativeToolStripMenuItem.Name = "_resetInitiativeToolStripMenuItem";
@@ -281,6 +288,7 @@
             this._dataGridViewManager.TabIndex = 5;
             this._dataGridViewManager.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this._dataGridViewManager_CellMouseDoubleClick);
             this._dataGridViewManager.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this._dataGridViewManager_ColumnHeaderMouseClick);
+            this._dataGridViewManager.KeyDown += new System.Windows.Forms.KeyEventHandler(this._dataGridViewManager_KeyDown);
             this._dataGridViewManager.MouseDown += new System.Windows.Forms.MouseEventHandler(this._dataGridViewManager_MouseDown);
             // 
             // turnBox
@@ -377,13 +385,6 @@
             this._copyBtn.Text = "Copy";
             this._copyBtn.UseVisualStyleBackColor = true;
             this._copyBtn.Click += new System.EventHandler(this._copyBtn_Click);
-            // 
-            // rollAsGroupToolStripMenuItem
-            // 
-            this.rollAsGroupToolStripMenuItem.Name = "rollAsGroupToolStripMenuItem";
-            this.rollAsGroupToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
-            this.rollAsGroupToolStripMenuItem.Text = "Roll As Group";
-            this.rollAsGroupToolStripMenuItem.Click += new System.EventHandler(this.rollAsGroupToolStripMenuItem_Click);
             // 
             // Manager
             // 

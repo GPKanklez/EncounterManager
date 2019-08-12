@@ -371,18 +371,14 @@ namespace EncounterManager
 
         private void _updateBtn_Click( object sender, EventArgs e )
         {
-            int index;
-            Character selected;
-            try
-            {
-                //pull first selected row, and row index
-                index = _dataGridViewManager.SelectedRows[0].Index;
-                selected = _dataGridViewManager.SelectedRows[0].DataBoundItem as Character;
-            } catch (Exception ex)
+            if (_dataGridViewManager.SelectedRows.Count == 0)
             {
                 MessageBox.Show("No Character Selected", "Error", MessageBoxButtons.OK);
                 return;
             }
+
+            var selected = _dataGridViewManager.SelectedRows[0].DataBoundItem as Character;
+            var index = _dataGridViewManager.SelectedRows[0].Index;
 
             //construct character form with preloaded character
             var form = new CharacterForm(selected);
@@ -404,39 +400,47 @@ namespace EncounterManager
 
         private void _copyBtn_Click( object sender, EventArgs e )
         {
-            int index;
-            Character selected;
-            try
-            {
-                //pull first selected row, and row index
-                index = _dataGridViewManager.SelectedRows[0].Index;
-                selected = _dataGridViewManager.SelectedRows[0].DataBoundItem as Character;
-            } catch (Exception ex)
+
+            if (_dataGridViewManager.SelectedRows.Count == 0)
             {
                 MessageBox.Show("No Character Selected", "Error", MessageBoxButtons.OK);
                 return;
             }
 
+            var selected = _dataGridViewManager.SelectedRows[0].DataBoundItem as Character;
+
             var match = Regex.Match(selected.Name, @"\((\d+)\)", RegexOptions.IgnoreCase);
+
             var copyName = selected.Name;
+            int copyNum = 1;
+            Match matchAllGrid;
+            string matchName;
 
             if (match.Success)
             {
-                copyName = selected.Name;
+                matchName = copyName.Remove(match.Index) + @"\((\d+)\)";
 
-                copyName = copyName.Remove(copyName.Count() - 1);
-                var result = Int32.TryParse(copyName.Substring(match.Index + 1), out int copyNum);
-
-                if(result)
+                foreach (DataGridViewRow row in _dataGridViewManager.Rows)
                 {
-                    copyName = copyName.Remove(match.Index + 1);
-                    copyNum++;
-                    copyName += copyNum.ToString() + ")";
-                };
+                    matchName = copyName.Remove(match.Index) + @"\((\d+)\)";
+                    matchAllGrid = Regex.Match(row.Cells["nameDataGridViewTextBoxColumn"].Value.ToString(), matchName, RegexOptions.IgnoreCase);
+                    if (matchAllGrid.Success)
+                        copyNum++;
+                }
+
+                copyName = copyName.Remove(match.Index + 1);
+                copyName += copyNum.ToString() + ")";
 
             } else
             {
-                copyName = selected.Name + "(1)";
+                matchName = copyName + @"\((\d+)\)";
+                foreach (DataGridViewRow row in _dataGridViewManager.Rows)
+                {                   
+                    matchAllGrid = Regex.Match(row.Cells["nameDataGridViewTextBoxColumn"].Value.ToString(), matchName, RegexOptions.IgnoreCase);
+                    if (matchAllGrid.Success)
+                        copyNum++;
+                }
+                copyName = selected.Name + "(" + copyNum.ToString() + ")";
             }
 
             Character copy = new Character()
@@ -448,37 +452,35 @@ namespace EncounterManager
                 CurrHP = selected.MaxHP
             };
 
-            Encounter.Characters.Insert(index + 1, copy);
+            Encounter.Characters.Add(copy);
             RefreshUI();
         }
 
         private void _delBtn_Click( object sender, EventArgs e )
         {
-            int index;
-            Character selected;
-            try
-            {
-                //pull first selected row, and row index
-                index = _dataGridViewManager.SelectedRows[0].Index;
-                selected = _dataGridViewManager.SelectedRows[0].DataBoundItem as Character;
-            } catch (Exception ex)
+
+            if(_dataGridViewManager.SelectedRows.Count == 0)
             {
                 MessageBox.Show("No Character Selected", "Error", MessageBoxButtons.OK);
                 return;
             }
+
             //confirm delete action and return if needed
             var result = MessageBox.Show("Are you sure you want to delete the selected characters?", "Delete Character", MessageBoxButtons.YesNo);
             if (result != DialogResult.Yes)
                 return;
-        
-            var indexList = new List<int>();
-            //get row numbers of item to delete and delete it
-            foreach (DataGridViewRow row in _dataGridViewManager.SelectedRows)
+
+            //delete starting with last in list to avoid index errors
+            var count = _dataGridViewManager.Rows.Count;
+
+            for (int i = count - 1; i >= 0; i--)
             {
-                //indexList.Add(row.Index);
-                Encounter.Characters.RemoveAt(row.Index);
+                if (_dataGridViewManager.Rows[i].Selected)
+                {
+                    Encounter.Characters.RemoveAt(i);
+                }
             }
-        
+                   
             //update binding source and grid
             RefreshUI();            
         }
@@ -664,6 +666,14 @@ namespace EncounterManager
         private void copySelectedToolStripMenuItem_Click( object sender, EventArgs e )
         {
             _copyBtn_Click(sender, e);
+        }
+
+        private void _dataGridViewManager_KeyDown( object sender, KeyEventArgs e )
+        {
+            if(e.KeyCode == Keys.Delete)
+            {
+                _delBtn_Click(sender, e);
+            }
         }
     }
 }

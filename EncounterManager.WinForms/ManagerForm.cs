@@ -502,14 +502,9 @@ namespace EncounterManager
                 return;
             }
 
-            if (index != 0)
+            if (index > 0 && index < _dataGridViewManager.Rows.Count)
             {
-                //copy character
-                var temp = Encounter.Characters.ElementAt(index);
-
-                //insert copy before original, delete original
-                Encounter.Characters.Insert(index - 1, temp);
-                Encounter.Characters.RemoveAt(index + 1);
+                Encounter.SwapCharacters(index, index -1 );
 
                 RefreshUI();
 
@@ -532,14 +527,9 @@ namespace EncounterManager
                 return;
             }
 
-            if (!(index < _dataGridViewManager.SelectedRows.Count))
+            if( index >= 0 && index < _dataGridViewManager.Rows.Count - 1 )
             {
-                //copy character
-                var temp = Encounter.Characters.ElementAt(index);
-
-                //remove original, let characters below slide up, and insert lower in list
-                Encounter.Characters.RemoveAt(index);
-                Encounter.Characters.Insert(index + 1, temp);
+                Encounter.SwapCharacters(index, index + 1 );
 
                 RefreshUI();
 
@@ -732,14 +722,13 @@ namespace EncounterManager
             // If the drag operation was a move then remove and insert the row.
             if (e.Effect == DragDropEffects.Move)
             {
-                var character = Encounter.Characters[rowIndexFromMouseDown];
-                Encounter.Characters.RemoveAt(rowIndexFromMouseDown);
-                Encounter.Characters.Insert(rowIndexOfItemUnderMouseToDrop, character);
+                Encounter.SwapCharacters(rowIndexFromMouseDown, rowIndexOfItemUnderMouseToDrop);
                 RefreshUI();
 
             }
         }
         #endregion
+        //this isn't handling properly and only matters for adding and removing elements through the gridview methods itself
         private void _collectionChanged(object sender, CollectionChangeEventArgs e)
         {
             switch (e.Action)

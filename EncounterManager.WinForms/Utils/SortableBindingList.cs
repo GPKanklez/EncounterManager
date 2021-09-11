@@ -7,7 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EncounterManager
+namespace EncounterManager.Utils
 {
     public class SortableBindingList<T> : BindingList<T>
     {

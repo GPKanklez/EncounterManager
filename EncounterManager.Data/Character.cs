@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace EncounterManager
+namespace EncounterManager.Data
 {
     public class Character {
         public Character() { CurrHP = MaxHP; }

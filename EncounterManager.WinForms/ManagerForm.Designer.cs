@@ -404,7 +404,7 @@
             // 
             // characterBindingSource
             // 
-            this.characterBindingSource.DataSource = typeof(EncounterManager.Character);
+            this.characterBindingSource.DataSource = typeof(EncounterManager.Data.Character);
             // 
             // Manager
             // 

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Microsoft.VisualBasic.FileIO;
 using System.IO;
 using System.Text.RegularExpressions;
+using EncounterManager.Data;
+using EncounterManager.Utils;
 
 namespace EncounterManager
 {

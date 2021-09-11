@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EncounterManager
+namespace EncounterManager.Data
 {
     public class Encounter
     {

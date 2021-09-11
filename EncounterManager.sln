@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2036
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncounterManager.Windows", "EncounterManager\EncounterManager.Windows.csproj", "{79172C24-0AA8-4518-B0DE-0A153EA6CBA2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncounterManager.Data", "EncounterManager.Data\EncounterManager.Data.csproj", "{B4858599-49FC-4BAB-AD15-D0577C8360EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncounterManager.Windows", "EncounterManager.WinForms\EncounterManager.Windows.csproj", "{79172C24-0AA8-4518-B0DE-0A153EA6CBA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4858599-49FC-4BAB-AD15-D0577C8360EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4858599-49FC-4BAB-AD15-D0577C8360EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4858599-49FC-4BAB-AD15-D0577C8360EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4858599-49FC-4BAB-AD15-D0577C8360EC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{79172C24-0AA8-4518-B0DE-0A153EA6CBA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{79172C24-0AA8-4518-B0DE-0A153EA6CBA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79172C24-0AA8-4518-B0DE-0A153EA6CBA2}.Release|Any CPU.ActiveCfg = Release|Any CPU

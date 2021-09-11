@@ -596,20 +596,6 @@ namespace EncounterManager
         {
             _dataGridViewManager.BeginEdit(false);
         }
-        /*
-
-        private void _dataGridViewManager_MouseDown( object sender, MouseEventArgs e )
-        {
-            DataGridView.HitTestInfo hitTest = _dataGridViewManager.HitTest(e.X, e.Y);
-
-            //allow user to delselect by clicking blank space
-            if (hitTest.Type == DataGridViewHitTestType.None)
-            {
-                _dataGridViewManager.ClearSelection();
-            }
-
-        }
-        */
         private void Manager_MouseDown( object sender, MouseEventArgs e )
         {
             //if click on form, deselect row

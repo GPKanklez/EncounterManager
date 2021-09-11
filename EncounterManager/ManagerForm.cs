@@ -596,6 +596,7 @@ namespace EncounterManager
         {
             _dataGridViewManager.BeginEdit(false);
         }
+        /*
 
         private void _dataGridViewManager_MouseDown( object sender, MouseEventArgs e )
         {
@@ -608,7 +609,7 @@ namespace EncounterManager
             }
 
         }
-
+        */
         private void Manager_MouseDown( object sender, MouseEventArgs e )
         {
             //if click on form, deselect row
@@ -629,10 +630,10 @@ namespace EncounterManager
             view.Clear();
 
             //add all characters back into binding source
-            foreach (Character chrc in Encounter.Characters)
-            {
-                view.Add(chrc);
-            }
+                foreach (Character chrc in Encounter.Characters)
+                {
+                    view.Add(chrc);
+                } 
 
             //rebind and make pretty
             characterBindingSource.DataSource = view;
@@ -673,6 +674,92 @@ namespace EncounterManager
             if(e.KeyCode == Keys.Delete)
             {
                 _delBtn_Click(sender, e);
+            }
+        }
+
+        #region dragAndDrop
+        private Rectangle dragBoxFromMouseDown;
+        private int rowIndexFromMouseDown;
+        private int rowIndexOfItemUnderMouseToDrop;
+        private void _dataGridViewManager_MouseMove(object sender, MouseEventArgs e)
+        {
+            if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+            {
+                // If the mouse moves outside the rectangle, start the drag.
+                if (dragBoxFromMouseDown != Rectangle.Empty &&
+                    !dragBoxFromMouseDown.Contains(e.X, e.Y))
+                {
+
+                    // Proceed with the drag and drop, passing in the list item.                    
+                    DragDropEffects dropEffect = _dataGridViewManager.DoDragDrop(
+                    _dataGridViewManager.Rows[rowIndexFromMouseDown],
+                    DragDropEffects.Move);
+                }
+            }
+        }
+
+        private void _dataGridViewManager_MouseDown(object sender, MouseEventArgs e)
+        {
+            // Get the index of the item the mouse is below.
+            rowIndexFromMouseDown = _dataGridViewManager.HitTest(e.X, e.Y).RowIndex;
+            if (rowIndexFromMouseDown != -1)
+            {
+                // Remember the point where the mouse down occurred. 
+                // The DragSize indicates the size that the mouse can move 
+                // before a drag event should be started.                
+                Size dragSize = SystemInformation.DragSize;
+
+                // Create a rectangle using the DragSize, with the mouse position being
+                // at the center of the rectangle.
+                dragBoxFromMouseDown = new Rectangle(new Point(e.X - (dragSize.Width / 2),
+                                                               e.Y - (dragSize.Height / 2)),
+                                    dragSize);
+            }
+            else
+                // Reset the rectangle if the mouse is not over an item in the ListBox.
+                dragBoxFromMouseDown = Rectangle.Empty;
+        }
+
+        private void _dataGridViewManager_DragOver(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Move;
+        }
+
+        private void _dataGridViewManager_DragDrop(object sender, DragEventArgs e)
+        {
+            // The mouse locations are relative to the screen, so they must be 
+            // converted to client coordinates.
+            Point clientPoint = _dataGridViewManager.PointToClient(new Point(e.X, e.Y));
+
+            // Get the row index of the item the mouse is below. 
+            rowIndexOfItemUnderMouseToDrop =
+                _dataGridViewManager.HitTest(clientPoint.X, clientPoint.Y).RowIndex;
+
+            // If the drag operation was a move then remove and insert the row.
+            if (e.Effect == DragDropEffects.Move)
+            {
+                var character = Encounter.Characters[rowIndexFromMouseDown];
+                Encounter.Characters.RemoveAt(rowIndexFromMouseDown);
+                Encounter.Characters.Insert(rowIndexOfItemUnderMouseToDrop, character);
+                RefreshUI();
+
+            }
+        }
+        #endregion
+        private void _collectionChanged(object sender, CollectionChangeEventArgs e)
+        {
+            switch (e.Action)
+            {
+                case CollectionChangeAction.Add:
+                    Encounter.Characters.Add(e.Element as Character);
+                    break;
+                case CollectionChangeAction.Remove:
+                    Encounter.Characters.Remove(e.Element as Character);
+                    break;
+                case CollectionChangeAction.Refresh:
+                    Encounter.Characters.Remove(e.Element as Character);
+                    Encounter.Characters.Add(e.Element as Character);
+                    break;
             }
         }
     }

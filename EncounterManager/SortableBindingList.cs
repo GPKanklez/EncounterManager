@@ -16,36 +16,6 @@ namespace EncounterManager
         public ListSortDirection sortDirection { get; set; }
         protected override bool SupportsSortingCore { get { return true; } }
 
-        //public void Save( string filename )
-        //{
-        //    BinaryFormatter formatter = new BinaryFormatter();
-        //    using (FileStream stream =
-        //        new FileStream(filename, FileMode.Create))
-        //    {
-        //        //needs to be serialzed
-        //        formatter.Serialize(stream, (List<T>)Items);
-        //    }
-        //}
-
-        //public void Load( string filename )
-        //{
-        //    ClearItems();
-        //    if (File.Exists(filename))
-        //    {
-        //        BinaryFormatter formatter = new BinaryFormatter();
-        //        using (FileStream stream =
-        //            new FileStream(filename, FileMode.Open))
-        //        {
-        //            //needs to be deserialzed
-        //            ((List<T>)Items).AddRange(
-        //                (IEnumerable<T>)formatter.Deserialize(stream));
-        //        }
-        //    }
-        //    OnListChanged(
-        //       new ListChangedEventArgs(ListChangedType.Reset, -1));
-
-        //}
-
         protected override void ApplySortCore( PropertyDescriptor property, ListSortDirection direction )
         {
             List<T> itemsList = (List<T>)this.Items;

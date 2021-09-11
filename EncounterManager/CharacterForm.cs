@@ -71,6 +71,7 @@ namespace EncounterManager
         }
 
         public Character Character { get; set; }
+        //TODO Validate null entries/ default them to 0
 
         private void _nameBox_Validating( object sender, CancelEventArgs e )
         {

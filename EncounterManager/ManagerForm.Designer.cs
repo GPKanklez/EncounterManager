@@ -54,15 +54,15 @@
             this._dataGridViewManager = new System.Windows.Forms.DataGridView();
             this.turnBox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.CurrIni = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iniBonusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CurrHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notesBox = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.characterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._slideUpBtn = new System.Windows.Forms.Button();
             this._slideDownBtn = new System.Windows.Forms.Button();
             this._rollInitiativeBtn = new System.Windows.Forms.Button();
             this._copyBtn = new System.Windows.Forms.Button();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iniBonusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.characterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._mainMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._dataGridViewManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.characterBindingSource)).BeginInit();
@@ -71,9 +71,10 @@
             // _addBtn
             // 
             this._addBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this._addBtn.Location = new System.Drawing.Point(12, 434);
+            this._addBtn.Location = new System.Drawing.Point(18, 678);
+            this._addBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this._addBtn.Name = "_addBtn";
-            this._addBtn.Size = new System.Drawing.Size(75, 23);
+            this._addBtn.Size = new System.Drawing.Size(112, 36);
             this._addBtn.TabIndex = 0;
             this._addBtn.Text = "Add";
             this._addBtn.UseVisualStyleBackColor = true;
@@ -82,9 +83,10 @@
             // _updateBtn
             // 
             this._updateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this._updateBtn.Location = new System.Drawing.Point(93, 434);
+            this._updateBtn.Location = new System.Drawing.Point(140, 678);
+            this._updateBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this._updateBtn.Name = "_updateBtn";
-            this._updateBtn.Size = new System.Drawing.Size(75, 23);
+            this._updateBtn.Size = new System.Drawing.Size(112, 36);
             this._updateBtn.TabIndex = 1;
             this._updateBtn.Text = "Update";
             this._updateBtn.UseVisualStyleBackColor = true;
@@ -93,9 +95,10 @@
             // _delBtn
             // 
             this._delBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this._delBtn.Location = new System.Drawing.Point(255, 434);
+            this._delBtn.Location = new System.Drawing.Point(382, 678);
+            this._delBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this._delBtn.Name = "_delBtn";
-            this._delBtn.Size = new System.Drawing.Size(75, 23);
+            this._delBtn.Size = new System.Drawing.Size(112, 36);
             this._delBtn.TabIndex = 2;
             this._delBtn.Text = "Delete";
             this._delBtn.UseVisualStyleBackColor = true;
@@ -104,9 +107,10 @@
             // _nextTurnBtn
             // 
             this._nextTurnBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this._nextTurnBtn.Location = new System.Drawing.Point(722, 434);
+            this._nextTurnBtn.Location = new System.Drawing.Point(1083, 678);
+            this._nextTurnBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this._nextTurnBtn.Name = "_nextTurnBtn";
-            this._nextTurnBtn.Size = new System.Drawing.Size(106, 23);
+            this._nextTurnBtn.Size = new System.Drawing.Size(159, 36);
             this._nextTurnBtn.TabIndex = 3;
             this._nextTurnBtn.Text = "Next Turn";
             this._nextTurnBtn.UseVisualStyleBackColor = true;
@@ -114,6 +118,7 @@
             // 
             // _mainMenuStrip
             // 
+            this._mainMenuStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this._mainMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this._mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._fileToolStripMenuItem,
@@ -121,7 +126,8 @@
             this._characterToolStripMenuItem});
             this._mainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this._mainMenuStrip.Name = "_mainMenuStrip";
-            this._mainMenuStrip.Size = new System.Drawing.Size(952, 28);
+            this._mainMenuStrip.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
+            this._mainMenuStrip.Size = new System.Drawing.Size(1428, 48);
             this._mainMenuStrip.TabIndex = 4;
             this._mainMenuStrip.Text = "menuStrip1";
             this._mainMenuStrip.MouseDown += new System.Windows.Forms.MouseEventHandler(this._mainMenuStrip_MouseDown);
@@ -135,41 +141,41 @@
             this._addEncounterToolStripMenuItem,
             this._exitToolStripMenuItem});
             this._fileToolStripMenuItem.Name = "_fileToolStripMenuItem";
-            this._fileToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
+            this._fileToolStripMenuItem.Size = new System.Drawing.Size(72, 42);
             this._fileToolStripMenuItem.Text = "&File";
             // 
             // newEncounterToolStripMenuItem
             // 
             this.newEncounterToolStripMenuItem.Name = "newEncounterToolStripMenuItem";
-            this.newEncounterToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
+            this.newEncounterToolStripMenuItem.Size = new System.Drawing.Size(334, 44);
             this.newEncounterToolStripMenuItem.Text = "&New Encounter";
             this.newEncounterToolStripMenuItem.Click += new System.EventHandler(this._newEncounterToolStripMenuItem_Click);
             // 
             // _saveEncounterToolStripMenuItem
             // 
             this._saveEncounterToolStripMenuItem.Name = "_saveEncounterToolStripMenuItem";
-            this._saveEncounterToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
+            this._saveEncounterToolStripMenuItem.Size = new System.Drawing.Size(334, 44);
             this._saveEncounterToolStripMenuItem.Text = "&Save Encounter";
             this._saveEncounterToolStripMenuItem.Click += new System.EventHandler(this._saveEncounterToolStripMenuItem_Click);
             // 
             // _loadEncounterToolStripMenuItem
             // 
             this._loadEncounterToolStripMenuItem.Name = "_loadEncounterToolStripMenuItem";
-            this._loadEncounterToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
+            this._loadEncounterToolStripMenuItem.Size = new System.Drawing.Size(334, 44);
             this._loadEncounterToolStripMenuItem.Text = "&Load Encounter";
             this._loadEncounterToolStripMenuItem.Click += new System.EventHandler(this._loadEncounterToolStripMenuItem_Click);
             // 
             // _addEncounterToolStripMenuItem
             // 
             this._addEncounterToolStripMenuItem.Name = "_addEncounterToolStripMenuItem";
-            this._addEncounterToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
+            this._addEncounterToolStripMenuItem.Size = new System.Drawing.Size(334, 44);
             this._addEncounterToolStripMenuItem.Text = "&Merge Encounter";
             this._addEncounterToolStripMenuItem.Click += new System.EventHandler(this._mergeEncounterToolStripMenuItem_Click);
             // 
             // _exitToolStripMenuItem
             // 
             this._exitToolStripMenuItem.Name = "_exitToolStripMenuItem";
-            this._exitToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
+            this._exitToolStripMenuItem.Size = new System.Drawing.Size(334, 44);
             this._exitToolStripMenuItem.Text = "E&xit";
             this._exitToolStripMenuItem.Click += new System.EventHandler(this._exitToolStripMenuItem_Click);
             // 
@@ -181,34 +187,34 @@
             this._resetInitiativeToolStripMenuItem,
             this._resetHitPointsToolStripMenuItem});
             this._encounterToolStripMenuItem.Name = "_encounterToolStripMenuItem";
-            this._encounterToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
+            this._encounterToolStripMenuItem.Size = new System.Drawing.Size(143, 42);
             this._encounterToolStripMenuItem.Text = "&Encounter";
             // 
             // _rollInitiativeToolStripMenuItem
             // 
             this._rollInitiativeToolStripMenuItem.Name = "_rollInitiativeToolStripMenuItem";
-            this._rollInitiativeToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
+            this._rollInitiativeToolStripMenuItem.Size = new System.Drawing.Size(343, 44);
             this._rollInitiativeToolStripMenuItem.Text = "Roll Only Selected";
             this._rollInitiativeToolStripMenuItem.Click += new System.EventHandler(this._rollSelectedInitiativeToolStripMenuItem_Click);
             // 
             // rollAsGroupToolStripMenuItem
             // 
             this.rollAsGroupToolStripMenuItem.Name = "rollAsGroupToolStripMenuItem";
-            this.rollAsGroupToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
+            this.rollAsGroupToolStripMenuItem.Size = new System.Drawing.Size(343, 44);
             this.rollAsGroupToolStripMenuItem.Text = "Roll As Group";
             this.rollAsGroupToolStripMenuItem.Click += new System.EventHandler(this.rollAsGroupToolStripMenuItem_Click);
             // 
             // _resetInitiativeToolStripMenuItem
             // 
             this._resetInitiativeToolStripMenuItem.Name = "_resetInitiativeToolStripMenuItem";
-            this._resetInitiativeToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
+            this._resetInitiativeToolStripMenuItem.Size = new System.Drawing.Size(343, 44);
             this._resetInitiativeToolStripMenuItem.Text = "&Reset Initiative";
             this._resetInitiativeToolStripMenuItem.Click += new System.EventHandler(this._resetInitiativeToolStripMenuItem_Click);
             // 
             // _resetHitPointsToolStripMenuItem
             // 
             this._resetHitPointsToolStripMenuItem.Name = "_resetHitPointsToolStripMenuItem";
-            this._resetHitPointsToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
+            this._resetHitPointsToolStripMenuItem.Size = new System.Drawing.Size(343, 44);
             this._resetHitPointsToolStripMenuItem.Text = "Reset &Hit Points";
             this._resetHitPointsToolStripMenuItem.Click += new System.EventHandler(this._resetHitPointsToolStripMenuItem_Click);
             // 
@@ -220,39 +226,40 @@
             this.copySelectedToolStripMenuItem,
             this._deleteToolStripMenuItem});
             this._characterToolStripMenuItem.Name = "_characterToolStripMenuItem";
-            this._characterToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
+            this._characterToolStripMenuItem.Size = new System.Drawing.Size(136, 42);
             this._characterToolStripMenuItem.Text = "&Character";
             // 
             // _addToolStripMenuItem
             // 
             this._addToolStripMenuItem.Name = "_addToolStripMenuItem";
-            this._addToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+            this._addToolStripMenuItem.Size = new System.Drawing.Size(324, 44);
             this._addToolStripMenuItem.Text = "&Add New";
             this._addToolStripMenuItem.Click += new System.EventHandler(this._addToolStripMenuItem_Click);
             // 
             // _updateToolStripMenuItem
             // 
             this._updateToolStripMenuItem.Name = "_updateToolStripMenuItem";
-            this._updateToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+            this._updateToolStripMenuItem.Size = new System.Drawing.Size(324, 44);
             this._updateToolStripMenuItem.Text = "&Update Selected";
             this._updateToolStripMenuItem.Click += new System.EventHandler(this._updateToolStripMenuItem_Click);
             // 
             // copySelectedToolStripMenuItem
             // 
             this.copySelectedToolStripMenuItem.Name = "copySelectedToolStripMenuItem";
-            this.copySelectedToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+            this.copySelectedToolStripMenuItem.Size = new System.Drawing.Size(324, 44);
             this.copySelectedToolStripMenuItem.Text = "Copy Selected";
             this.copySelectedToolStripMenuItem.Click += new System.EventHandler(this.copySelectedToolStripMenuItem_Click);
             // 
             // _deleteToolStripMenuItem
             // 
             this._deleteToolStripMenuItem.Name = "_deleteToolStripMenuItem";
-            this._deleteToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+            this._deleteToolStripMenuItem.Size = new System.Drawing.Size(324, 44);
             this._deleteToolStripMenuItem.Text = "&Delete Selected";
             this._deleteToolStripMenuItem.Click += new System.EventHandler(this._deleteToolStripMenuItem_Click);
             // 
             // _dataGridViewManager
             // 
+            this._dataGridViewManager.AllowDrop = true;
             this._dataGridViewManager.AllowUserToAddRows = false;
             this._dataGridViewManager.AllowUserToDeleteRows = false;
             this._dataGridViewManager.AllowUserToOrderColumns = true;
@@ -279,75 +286,65 @@
             this.CurrHP,
             this.notesBox});
             this._dataGridViewManager.DataSource = this.characterBindingSource;
-            this._dataGridViewManager.Location = new System.Drawing.Point(12, 31);
+            this._dataGridViewManager.Location = new System.Drawing.Point(18, 48);
+            this._dataGridViewManager.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this._dataGridViewManager.Name = "_dataGridViewManager";
             this._dataGridViewManager.RowHeadersVisible = false;
+            this._dataGridViewManager.RowHeadersWidth = 82;
             this._dataGridViewManager.RowTemplate.Height = 24;
             this._dataGridViewManager.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this._dataGridViewManager.Size = new System.Drawing.Size(928, 397);
+            this._dataGridViewManager.Size = new System.Drawing.Size(1392, 620);
             this._dataGridViewManager.TabIndex = 5;
             this._dataGridViewManager.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this._dataGridViewManager_CellMouseDoubleClick);
             this._dataGridViewManager.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this._dataGridViewManager_ColumnHeaderMouseClick);
+            this._dataGridViewManager.DragDrop += new System.Windows.Forms.DragEventHandler(this._dataGridViewManager_DragDrop);
+            this._dataGridViewManager.DragOver += new System.Windows.Forms.DragEventHandler(this._dataGridViewManager_DragOver);
             this._dataGridViewManager.KeyDown += new System.Windows.Forms.KeyEventHandler(this._dataGridViewManager_KeyDown);
             this._dataGridViewManager.MouseDown += new System.Windows.Forms.MouseEventHandler(this._dataGridViewManager_MouseDown);
+            this._dataGridViewManager.MouseMove += new System.Windows.Forms.MouseEventHandler(this._dataGridViewManager_MouseMove);
             // 
             // turnBox
             // 
             this.turnBox.Frozen = true;
             this.turnBox.HeaderText = "Turn";
+            this.turnBox.MinimumWidth = 10;
             this.turnBox.Name = "turnBox";
             this.turnBox.ReadOnly = true;
-            this.turnBox.Width = 44;
+            this.turnBox.Width = 62;
             // 
             // CurrIni
             // 
             this.CurrIni.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.CurrIni.DataPropertyName = "CurrIni";
             this.CurrIni.HeaderText = "Initiative";
+            this.CurrIni.MinimumWidth = 10;
             this.CurrIni.Name = "CurrIni";
             this.CurrIni.Visible = false;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 74;
-            // 
-            // iniBonusDataGridViewTextBoxColumn
-            // 
-            this.iniBonusDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.iniBonusDataGridViewTextBoxColumn.DataPropertyName = "IniBonus";
-            this.iniBonusDataGridViewTextBoxColumn.HeaderText = "Initiative";
-            this.iniBonusDataGridViewTextBoxColumn.Name = "iniBonusDataGridViewTextBoxColumn";
-            this.iniBonusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iniBonusDataGridViewTextBoxColumn.Width = 88;
+            this.CurrIni.Width = 136;
             // 
             // CurrHP
             // 
             this.CurrHP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.CurrHP.DataPropertyName = "CurrHP";
             this.CurrHP.HeaderText = "HP";
+            this.CurrHP.MinimumWidth = 10;
             this.CurrHP.Name = "CurrHP";
-            this.CurrHP.Width = 56;
+            this.CurrHP.Width = 86;
             // 
             // notesBox
             // 
             this.notesBox.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.notesBox.HeaderText = "Notes";
+            this.notesBox.MinimumWidth = 10;
             this.notesBox.Name = "notesBox";
-            // 
-            // characterBindingSource
-            // 
-            this.characterBindingSource.DataSource = typeof(EncounterManager.Character);
             // 
             // _slideUpBtn
             // 
             this._slideUpBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this._slideUpBtn.Location = new System.Drawing.Point(443, 434);
+            this._slideUpBtn.Location = new System.Drawing.Point(664, 678);
+            this._slideUpBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this._slideUpBtn.Name = "_slideUpBtn";
-            this._slideUpBtn.Size = new System.Drawing.Size(106, 23);
+            this._slideUpBtn.Size = new System.Drawing.Size(159, 36);
             this._slideUpBtn.TabIndex = 6;
             this._slideUpBtn.Text = "Slide Up";
             this._slideUpBtn.UseVisualStyleBackColor = true;
@@ -356,9 +353,10 @@
             // _slideDownBtn
             // 
             this._slideDownBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this._slideDownBtn.Location = new System.Drawing.Point(555, 434);
+            this._slideDownBtn.Location = new System.Drawing.Point(832, 678);
+            this._slideDownBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this._slideDownBtn.Name = "_slideDownBtn";
-            this._slideDownBtn.Size = new System.Drawing.Size(106, 23);
+            this._slideDownBtn.Size = new System.Drawing.Size(159, 36);
             this._slideDownBtn.TabIndex = 7;
             this._slideDownBtn.Text = "Slide Down";
             this._slideDownBtn.UseVisualStyleBackColor = true;
@@ -367,9 +365,10 @@
             // _rollInitiativeBtn
             // 
             this._rollInitiativeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this._rollInitiativeBtn.Location = new System.Drawing.Point(834, 434);
+            this._rollInitiativeBtn.Location = new System.Drawing.Point(1251, 678);
+            this._rollInitiativeBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this._rollInitiativeBtn.Name = "_rollInitiativeBtn";
-            this._rollInitiativeBtn.Size = new System.Drawing.Size(106, 23);
+            this._rollInitiativeBtn.Size = new System.Drawing.Size(159, 36);
             this._rollInitiativeBtn.TabIndex = 8;
             this._rollInitiativeBtn.Text = "Roll Initiative!";
             this._rollInitiativeBtn.UseVisualStyleBackColor = true;
@@ -378,19 +377,40 @@
             // _copyBtn
             // 
             this._copyBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this._copyBtn.Location = new System.Drawing.Point(174, 434);
+            this._copyBtn.Location = new System.Drawing.Point(261, 678);
+            this._copyBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this._copyBtn.Name = "_copyBtn";
-            this._copyBtn.Size = new System.Drawing.Size(75, 23);
+            this._copyBtn.Size = new System.Drawing.Size(112, 36);
             this._copyBtn.TabIndex = 9;
             this._copyBtn.Text = "Copy";
             this._copyBtn.UseVisualStyleBackColor = true;
             this._copyBtn.Click += new System.EventHandler(this._copyBtn_Click);
             // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 113;
+            // 
+            // iniBonusDataGridViewTextBoxColumn
+            // 
+            this.iniBonusDataGridViewTextBoxColumn.DataPropertyName = "IniBonus";
+            this.iniBonusDataGridViewTextBoxColumn.HeaderText = "Initiative";
+            this.iniBonusDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.iniBonusDataGridViewTextBoxColumn.Name = "iniBonusDataGridViewTextBoxColumn";
+            this.iniBonusDataGridViewTextBoxColumn.Width = 136;
+            // 
+            // characterBindingSource
+            // 
+            this.characterBindingSource.DataSource = typeof(EncounterManager.Character);
+            // 
             // Manager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 469);
+            this.ClientSize = new System.Drawing.Size(1428, 733);
             this.Controls.Add(this._copyBtn);
             this.Controls.Add(this._rollInitiativeBtn);
             this.Controls.Add(this._slideDownBtn);
@@ -402,7 +422,8 @@
             this.Controls.Add(this._addBtn);
             this.Controls.Add(this._mainMenuStrip);
             this.MainMenuStrip = this._mainMenuStrip;
-            this.MinimumSize = new System.Drawing.Size(861, 473);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(1278, 699);
             this.Name = "Manager";
             this.Text = "Encounter Manager";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Manager_MouseDown);
@@ -437,12 +458,6 @@
         private System.Windows.Forms.ToolStripMenuItem _deleteToolStripMenuItem;
         private System.Windows.Forms.DataGridView _dataGridViewManager;
         private System.Windows.Forms.BindingSource characterBindingSource;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn turnBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CurrIni;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iniBonusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CurrHP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn notesBox;
         private System.Windows.Forms.ToolStripMenuItem newEncounterToolStripMenuItem;
         private System.Windows.Forms.Button _slideUpBtn;
         private System.Windows.Forms.Button _slideDownBtn;
@@ -450,6 +465,12 @@
         private System.Windows.Forms.ToolStripMenuItem copySelectedToolStripMenuItem;
         private System.Windows.Forms.Button _copyBtn;
         private System.Windows.Forms.ToolStripMenuItem rollAsGroupToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn turnBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CurrIni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iniBonusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CurrHP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn notesBox;
     }
 }
 

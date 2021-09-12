@@ -39,6 +39,15 @@ namespace EncounterManager.Data
             get => maxHP;
             set => SetProperty(ref maxHP, value);
         }
+        [Required]
+        private int ac;
+        public int AC
+        {
+            get => ac;
+            set => SetProperty(ref ac, value);
+        }
+        [MaxLength(1500)]
+        public string Notes { get; set; }
         public int CurrHP { get; set; }
         //public int Id { get; set; }
     }

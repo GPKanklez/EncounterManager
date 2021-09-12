@@ -634,7 +634,7 @@ namespace EncounterManager
                 foreach (Character chrc in Encounter.Characters)
                 {
                     view.Add(chrc);
-                } 
+                }
 
             //rebind and make pretty
             characterBindingSource.DataSource = view;

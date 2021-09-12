@@ -52,17 +52,18 @@
             this.copySelectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._dataGridViewManager = new System.Windows.Forms.DataGridView();
-            this.turnBox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.CurrIni = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CurrHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notesBox = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._slideUpBtn = new System.Windows.Forms.Button();
             this._slideDownBtn = new System.Windows.Forms.Button();
             this._rollInitiativeBtn = new System.Windows.Forms.Button();
             this._copyBtn = new System.Windows.Forms.Button();
+            this.characterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.turnBox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.CurrIni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iniBonusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.characterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CurrHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notesBox = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._mainMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._dataGridViewManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.characterBindingSource)).BeginInit();
@@ -281,6 +282,7 @@
             this._dataGridViewManager.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.turnBox,
             this.CurrIni,
+            this.AC,
             this.nameDataGridViewTextBoxColumn,
             this.iniBonusDataGridViewTextBoxColumn,
             this.CurrHP,
@@ -302,41 +304,6 @@
             this._dataGridViewManager.KeyDown += new System.Windows.Forms.KeyEventHandler(this._dataGridViewManager_KeyDown);
             this._dataGridViewManager.MouseDown += new System.Windows.Forms.MouseEventHandler(this._dataGridViewManager_MouseDown);
             this._dataGridViewManager.MouseMove += new System.Windows.Forms.MouseEventHandler(this._dataGridViewManager_MouseMove);
-            // 
-            // turnBox
-            // 
-            this.turnBox.Frozen = true;
-            this.turnBox.HeaderText = "Turn";
-            this.turnBox.MinimumWidth = 10;
-            this.turnBox.Name = "turnBox";
-            this.turnBox.ReadOnly = true;
-            this.turnBox.Width = 62;
-            // 
-            // CurrIni
-            // 
-            this.CurrIni.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.CurrIni.DataPropertyName = "CurrIni";
-            this.CurrIni.HeaderText = "Initiative";
-            this.CurrIni.MinimumWidth = 10;
-            this.CurrIni.Name = "CurrIni";
-            this.CurrIni.Visible = false;
-            this.CurrIni.Width = 136;
-            // 
-            // CurrHP
-            // 
-            this.CurrHP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.CurrHP.DataPropertyName = "CurrHP";
-            this.CurrHP.HeaderText = "HP";
-            this.CurrHP.MinimumWidth = 10;
-            this.CurrHP.Name = "CurrHP";
-            this.CurrHP.Width = 86;
-            // 
-            // notesBox
-            // 
-            this.notesBox.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.notesBox.HeaderText = "Notes";
-            this.notesBox.MinimumWidth = 10;
-            this.notesBox.Name = "notesBox";
             // 
             // _slideUpBtn
             // 
@@ -386,6 +353,37 @@
             this._copyBtn.UseVisualStyleBackColor = true;
             this._copyBtn.Click += new System.EventHandler(this._copyBtn_Click);
             // 
+            // characterBindingSource
+            // 
+            this.characterBindingSource.DataSource = typeof(EncounterManager.Data.Character);
+            // 
+            // turnBox
+            // 
+            this.turnBox.Frozen = true;
+            this.turnBox.HeaderText = "Turn";
+            this.turnBox.MinimumWidth = 10;
+            this.turnBox.Name = "turnBox";
+            this.turnBox.ReadOnly = true;
+            this.turnBox.Width = 62;
+            // 
+            // CurrIni
+            // 
+            this.CurrIni.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.CurrIni.DataPropertyName = "CurrIni";
+            this.CurrIni.HeaderText = "Initiative";
+            this.CurrIni.MinimumWidth = 10;
+            this.CurrIni.Name = "CurrIni";
+            this.CurrIni.Visible = false;
+            this.CurrIni.Width = 136;
+            // 
+            // AC
+            // 
+            this.AC.DataPropertyName = "AC";
+            this.AC.HeaderText = "AC";
+            this.AC.MinimumWidth = 10;
+            this.AC.Name = "AC";
+            this.AC.Width = 86;
+            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
@@ -402,9 +400,22 @@
             this.iniBonusDataGridViewTextBoxColumn.Name = "iniBonusDataGridViewTextBoxColumn";
             this.iniBonusDataGridViewTextBoxColumn.Width = 136;
             // 
-            // characterBindingSource
+            // CurrHP
             // 
-            this.characterBindingSource.DataSource = typeof(EncounterManager.Data.Character);
+            this.CurrHP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.CurrHP.DataPropertyName = "CurrHP";
+            this.CurrHP.HeaderText = "HP";
+            this.CurrHP.MinimumWidth = 10;
+            this.CurrHP.Name = "CurrHP";
+            this.CurrHP.Width = 86;
+            // 
+            // notesBox
+            // 
+            this.notesBox.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.notesBox.DataPropertyName = "Notes";
+            this.notesBox.HeaderText = "Notes";
+            this.notesBox.MinimumWidth = 10;
+            this.notesBox.Name = "notesBox";
             // 
             // Manager
             // 
@@ -467,6 +478,7 @@
         private System.Windows.Forms.ToolStripMenuItem rollAsGroupToolStripMenuItem;
         private System.Windows.Forms.DataGridViewCheckBoxColumn turnBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn CurrIni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AC;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iniBonusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn CurrHP;

@@ -85,19 +85,6 @@ namespace EncounterManager
                 using (StreamWriter stream = new StreamWriter(form.FileName))
                 {
                     stream.Write(json);
-                    /*
-
-                    //write encounter name
-                    stream.WriteLine(Encounter.Name);
-
-                    //write each character, and their attributes
-                    foreach (Character chrc in Encounter.Characters)
-                    {
-                        stream.Write(chrc.Name + ",");
-                        stream.Write(chrc.IniBonus + ",");
-                        stream.WriteLine(chrc.MaxHP);
-                    }
-                    */
                 }
             }
             catch (Exception ex)
@@ -132,35 +119,6 @@ namespace EncounterManager
                     var toParse = read.ReadToEnd();
                     Encounter = JsonSerializer.Deserialize<Encounter>(toParse);
                 }
-                /*
-                //prepare new encounter shell 
-                Encounter encounter = new Encounter();
-
-                //parse csv format
-                using (TextFieldParser parser = new TextFieldParser(name))
-                {
-                    parser.TextFieldType = FieldType.Delimited;
-                    parser.SetDelimiters(",");
-                    encounter.Name = parser.ReadLine();
-                    while (!parser.EndOfData)
-                    {
-                        Character character = new Character();
-                        //Process row
-                        string[] fields = parser.ReadFields();
-
-                        character.Name = fields[0];
-                        character.IniBonus = Convert.ToInt32(fields[1]);
-                        character.MaxHP = Convert.ToInt32(fields[2]);
-                        character.CurrHP = character.MaxHP;
-                        character.CurrIni = 0;
-
-                        encounter.Characters.Add(character);
-                    }
-                }
-
-                Encounter = encounter;
-                Text = Encounter.Name;
-                */
                 RefreshUI();
             } 
             catch (Exception ex)
@@ -196,29 +154,6 @@ namespace EncounterManager
                     Encounter.Merge(loaded);
                 }
 
-                /*
-                //parse csv of encounter to merge into existing
-                using (TextFieldParser parser = new TextFieldParser(name))
-                {
-                    parser.TextFieldType = FieldType.Delimited;
-                    parser.SetDelimiters(",");
-                    parser.ReadLine();
-                    while (!parser.EndOfData)
-                    {
-                        Character character = new Character();
-                        //Process row
-                        string[] fields = parser.ReadFields();
-
-                        character.Name = fields[0];
-                        character.IniBonus = Convert.ToInt32(fields[1]);
-                        character.MaxHP = Convert.ToInt32(fields[2]);
-                        character.CurrHP = character.MaxHP;
-                        character.CurrIni = 0;
-
-                        Encounter.Characters.Add(character);
-                    }
-                }
-                */
                 RefreshUI();
             } catch  (Exception ex)
             {

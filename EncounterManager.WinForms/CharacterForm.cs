@@ -52,8 +52,16 @@ namespace EncounterManager
 
         private void OnSave( object sender, EventArgs e )
         {
-            if (!ValidateChildren())
-                return;
+            if (_nameBox.Text != "")
+            {
+                this.DialogResult = DialogResult.OK;
+                Close();
+            }
+            else
+            {
+                _errorProvider.SetError(_nameBox, "Name cannot be blank");
+            }
+            
         }
 
     }

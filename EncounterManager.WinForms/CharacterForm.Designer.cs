@@ -75,7 +75,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(105, 23);
+            this.label1.Location = new System.Drawing.Point(19, 19);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
@@ -85,7 +85,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(61, 65);
+            this.label2.Location = new System.Drawing.Point(19, 62);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 13);
@@ -95,7 +95,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(88, 109);
+            this.label3.Location = new System.Drawing.Point(19, 106);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
@@ -105,7 +105,6 @@
             // _saveBtn
             // 
             this._saveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this._saveBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
             this._saveBtn.Location = new System.Drawing.Point(22, 275);
             this._saveBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this._saveBtn.Name = "_saveBtn";
@@ -138,7 +137,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(113, 160);
+            this.label4.Location = new System.Drawing.Point(19, 157);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(21, 13);
             this.label4.TabIndex = 8;

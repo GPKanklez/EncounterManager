@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this._addBtn = new System.Windows.Forms.Button();
             this._updateBtn = new System.Windows.Forms.Button();
             this._delBtn = new System.Windows.Forms.Button();
@@ -59,10 +59,10 @@
             this.characterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.turnBox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.CurrIni = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iniBonusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CurrHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notesBox = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._mainMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._dataGridViewManager)).BeginInit();
@@ -128,7 +128,7 @@
             this._mainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this._mainMenuStrip.Name = "_mainMenuStrip";
             this._mainMenuStrip.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this._mainMenuStrip.Size = new System.Drawing.Size(1428, 48);
+            this._mainMenuStrip.Size = new System.Drawing.Size(1428, 42);
             this._mainMenuStrip.TabIndex = 4;
             this._mainMenuStrip.Text = "menuStrip1";
             this._mainMenuStrip.MouseDown += new System.Windows.Forms.MouseEventHandler(this._mainMenuStrip_MouseDown);
@@ -142,7 +142,7 @@
             this._addEncounterToolStripMenuItem,
             this._exitToolStripMenuItem});
             this._fileToolStripMenuItem.Name = "_fileToolStripMenuItem";
-            this._fileToolStripMenuItem.Size = new System.Drawing.Size(72, 42);
+            this._fileToolStripMenuItem.Size = new System.Drawing.Size(72, 36);
             this._fileToolStripMenuItem.Text = "&File";
             // 
             // newEncounterToolStripMenuItem
@@ -188,7 +188,7 @@
             this._resetInitiativeToolStripMenuItem,
             this._resetHitPointsToolStripMenuItem});
             this._encounterToolStripMenuItem.Name = "_encounterToolStripMenuItem";
-            this._encounterToolStripMenuItem.Size = new System.Drawing.Size(143, 42);
+            this._encounterToolStripMenuItem.Size = new System.Drawing.Size(143, 36);
             this._encounterToolStripMenuItem.Text = "&Encounter";
             // 
             // _rollInitiativeToolStripMenuItem
@@ -227,7 +227,7 @@
             this.copySelectedToolStripMenuItem,
             this._deleteToolStripMenuItem});
             this._characterToolStripMenuItem.Name = "_characterToolStripMenuItem";
-            this._characterToolStripMenuItem.Size = new System.Drawing.Size(136, 42);
+            this._characterToolStripMenuItem.Size = new System.Drawing.Size(136, 36);
             this._characterToolStripMenuItem.Text = "&Character";
             // 
             // _addToolStripMenuItem
@@ -270,22 +270,22 @@
             this._dataGridViewManager.AutoGenerateColumns = false;
             this._dataGridViewManager.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this._dataGridViewManager.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this._dataGridViewManager.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this._dataGridViewManager.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this._dataGridViewManager.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this._dataGridViewManager.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.turnBox,
             this.CurrIni,
-            this.AC,
             this.nameDataGridViewTextBoxColumn,
             this.iniBonusDataGridViewTextBoxColumn,
             this.CurrHP,
+            this.AC,
             this.notesBox});
             this._dataGridViewManager.DataSource = this.characterBindingSource;
             this._dataGridViewManager.Location = new System.Drawing.Point(18, 48);
@@ -376,14 +376,6 @@
             this.CurrIni.Visible = false;
             this.CurrIni.Width = 136;
             // 
-            // AC
-            // 
-            this.AC.DataPropertyName = "AC";
-            this.AC.HeaderText = "AC";
-            this.AC.MinimumWidth = 10;
-            this.AC.Name = "AC";
-            this.AC.Width = 86;
-            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
@@ -408,6 +400,14 @@
             this.CurrHP.MinimumWidth = 10;
             this.CurrHP.Name = "CurrHP";
             this.CurrHP.Width = 86;
+            // 
+            // AC
+            // 
+            this.AC.DataPropertyName = "AC";
+            this.AC.HeaderText = "AC";
+            this.AC.MinimumWidth = 10;
+            this.AC.Name = "AC";
+            this.AC.Width = 86;
             // 
             // notesBox
             // 
@@ -478,10 +478,10 @@
         private System.Windows.Forms.ToolStripMenuItem rollAsGroupToolStripMenuItem;
         private System.Windows.Forms.DataGridViewCheckBoxColumn turnBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn CurrIni;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AC;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iniBonusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn CurrHP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AC;
         private System.Windows.Forms.DataGridViewTextBoxColumn notesBox;
     }
 }

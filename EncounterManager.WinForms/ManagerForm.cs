@@ -12,6 +12,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using EncounterManager.Data;
 using EncounterManager.Utils;
+using System.Text.Json;
 
 namespace EncounterManager
 {
@@ -61,8 +62,8 @@ namespace EncounterManager
             var form = new SaveFileDialog
             {
                 InitialDirectory = Environment.CurrentDirectory,
-                DefaultExt = ".txt",
-                Filter = "Text|*.txt|All|*.*",
+                DefaultExt = ".json",
+                Filter = "Json|*.json|All|*.*",
                 Title = "Save Encounter"
             };
 
@@ -76,11 +77,15 @@ namespace EncounterManager
             {
                 //get encounter name, set window text to match encounter name
                 Encounter.Name = Path.GetFileNameWithoutExtension(form.FileName);
-                Text = Encounter.Name;
+                //Text = Encounter.Name;
+                string json = JsonSerializer.Serialize<Encounter>(Encounter, new JsonSerializerOptions() { WriteIndented = true });
+                
 
                 //create document writer
                 using (StreamWriter stream = new StreamWriter(form.FileName))
                 {
+                    stream.Write(json);
+                    /*
 
                     //write encounter name
                     stream.WriteLine(Encounter.Name);
@@ -92,6 +97,7 @@ namespace EncounterManager
                         stream.Write(chrc.IniBonus + ",");
                         stream.WriteLine(chrc.MaxHP);
                     }
+                    */
                 }
             }
             catch (Exception ex)
@@ -106,7 +112,7 @@ namespace EncounterManager
             var form = new OpenFileDialog
             {
                 InitialDirectory = Environment.CurrentDirectory,
-                Filter = "Text|*.txt|All|*.*",
+                Filter = "Json|*.json|All|*.*",
                 Title = "Load Encounter"
             };
 
@@ -116,11 +122,17 @@ namespace EncounterManager
                 return;
 
             //get file path
-            string name = form.FileName;            
+            string name = form.FileName;
 
             //try parse encounter
             try
             {
+                using(StreamReader read = new StreamReader(name))
+                {
+                    var toParse = read.ReadToEnd();
+                    Encounter = JsonSerializer.Deserialize<Encounter>(toParse);
+                }
+                /*
                 //prepare new encounter shell 
                 Encounter encounter = new Encounter();
 
@@ -148,6 +160,7 @@ namespace EncounterManager
 
                 Encounter = encounter;
                 Text = Encounter.Name;
+                */
                 RefreshUI();
             } 
             catch (Exception ex)
@@ -162,7 +175,7 @@ namespace EncounterManager
             var form = new OpenFileDialog
             {
                 InitialDirectory = Environment.CurrentDirectory,
-                Filter = "Text|*.txt|All|*.*",
+                Filter = "Json|*.json|All|*.*",
                 Title = "Merge Encounter"
             };
 
@@ -176,7 +189,14 @@ namespace EncounterManager
             {
                 //get file path
                 string name = form.FileName;
+                using(StreamReader read = new StreamReader(name))
+                {
+                    var toParse = read.ReadToEnd();
+                    var loaded = JsonSerializer.Deserialize<Encounter>(toParse);
+                    Encounter.Merge(loaded);
+                }
 
+                /*
                 //parse csv of encounter to merge into existing
                 using (TextFieldParser parser = new TextFieldParser(name))
                 {
@@ -198,6 +218,7 @@ namespace EncounterManager
                         Encounter.Characters.Add(character);
                     }
                 }
+                */
                 RefreshUI();
             } catch  (Exception ex)
             {

@@ -10,7 +10,6 @@ namespace EncounterManager.Data
             Characters = new List<Character>();
         }
         public List<Character> Characters { get; set; }
-        public string FilePath { get; set; }       
         public string Name { get; set; }
 
         public void SwapCharacters(int startIndex, int endIndex) 
@@ -19,6 +18,14 @@ namespace EncounterManager.Data
             var character = Characters[startIndex];
             Characters.RemoveAt(startIndex);
             Characters.Insert(endIndex, character);
+        }
+        /// <summary>
+        /// Adds the list of characters from passed encounter to this encounter.
+        /// </summary>
+        /// <param name="encounter"></param>
+        public void Merge(Encounter encounter) 
+        {
+            Characters.AddRange(encounter.Characters);
         }
 
     }

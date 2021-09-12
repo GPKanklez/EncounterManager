@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseModel.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="Encounter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

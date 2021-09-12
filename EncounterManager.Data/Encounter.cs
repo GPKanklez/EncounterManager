@@ -4,7 +4,7 @@ using System.Text;
 
 namespace EncounterManager.Data
 {
-    public class Encounter
+    public class Encounter : BaseModel
     {
         public Encounter() {
             Characters = new List<Character>();

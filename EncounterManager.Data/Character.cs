@@ -3,15 +3,42 @@ using System.ComponentModel.DataAnnotations;
 
 namespace EncounterManager.Data
 {
-    public class Character {
-        public Character() { CurrHP = MaxHP; }
+    public class Character : BaseModel
+    {
+        public Character() { }
+        /// <summary>
+        /// Returns a new instance of passed character
+        /// </summary>
+        /// <param name="character"></param>
+        public Character(Character character) {
+            Name = character.Name;
+            IniBonus = character.IniBonus;
+            CurrIni = character.CurrIni;
+            MaxHP = character.MaxHP;
+            CurrHP = character.CurrHP;
+
+        }
+        private string name;
         [Required]
-        public string Name { get; set; }
+        [MinLength(1)]
+        [MaxLength(100)]
+        public string Name {
+            get => name;
+            set => SetProperty(ref name, value);
+        }
+        private int iniBonus;
         [Required]
-        public int IniBonus { get; set; }
+        public int IniBonus {
+            get => iniBonus;
+            set => SetProperty(ref iniBonus, value);
+        }
         public int CurrIni { get; set; }
+        private int maxHP;
         [Required]
-        public int MaxHP { get; set; }
+        public int MaxHP {
+            get => maxHP;
+            set => SetProperty(ref maxHP, value);
+        }
         public int CurrHP { get; set; }
         //public int Id { get; set; }
     }

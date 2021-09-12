@@ -523,6 +523,7 @@ namespace EncounterManager
                 index = _dataGridViewManager.SelectedRows[0].Index;
             } catch (Exception ex)
             {
+                //other classes of exceptions could happen here, we should do a Count check of SelectedRows
                 MessageBox.Show("No Character Selected", "Error", MessageBoxButtons.OK);
                 return;
             }
@@ -544,6 +545,7 @@ namespace EncounterManager
             _rollSelectedInitiativeToolStripMenuItem_Click(sender, e);
         }
 
+        //TODO: Conver this logic into Encounter
         private void _nextTurnBtn_Click( object sender, EventArgs e )
         {
             //go through each player

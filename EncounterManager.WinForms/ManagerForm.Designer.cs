@@ -76,10 +76,10 @@
             // _addBtn
             // 
             this._addBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this._addBtn.Location = new System.Drawing.Point(9, 353);
-            this._addBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this._addBtn.Location = new System.Drawing.Point(24, 842);
+            this._addBtn.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this._addBtn.Name = "_addBtn";
-            this._addBtn.Size = new System.Drawing.Size(56, 19);
+            this._addBtn.Size = new System.Drawing.Size(149, 45);
             this._addBtn.TabIndex = 0;
             this._addBtn.Text = "Add";
             this._addBtn.UseVisualStyleBackColor = true;
@@ -88,10 +88,10 @@
             // _updateBtn
             // 
             this._updateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this._updateBtn.Location = new System.Drawing.Point(70, 353);
-            this._updateBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this._updateBtn.Location = new System.Drawing.Point(187, 842);
+            this._updateBtn.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this._updateBtn.Name = "_updateBtn";
-            this._updateBtn.Size = new System.Drawing.Size(56, 19);
+            this._updateBtn.Size = new System.Drawing.Size(149, 45);
             this._updateBtn.TabIndex = 1;
             this._updateBtn.Text = "Update";
             this._updateBtn.UseVisualStyleBackColor = true;
@@ -100,10 +100,10 @@
             // _delBtn
             // 
             this._delBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this._delBtn.Location = new System.Drawing.Point(191, 353);
-            this._delBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this._delBtn.Location = new System.Drawing.Point(509, 842);
+            this._delBtn.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this._delBtn.Name = "_delBtn";
-            this._delBtn.Size = new System.Drawing.Size(56, 19);
+            this._delBtn.Size = new System.Drawing.Size(149, 45);
             this._delBtn.TabIndex = 2;
             this._delBtn.Text = "Delete";
             this._delBtn.UseVisualStyleBackColor = true;
@@ -112,10 +112,10 @@
             // _nextTurnBtn
             // 
             this._nextTurnBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this._nextTurnBtn.Location = new System.Drawing.Point(542, 353);
-            this._nextTurnBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this._nextTurnBtn.Location = new System.Drawing.Point(1445, 842);
+            this._nextTurnBtn.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this._nextTurnBtn.Name = "_nextTurnBtn";
-            this._nextTurnBtn.Size = new System.Drawing.Size(80, 19);
+            this._nextTurnBtn.Size = new System.Drawing.Size(213, 45);
             this._nextTurnBtn.TabIndex = 3;
             this._nextTurnBtn.Text = "Next Turn";
             this._nextTurnBtn.UseVisualStyleBackColor = true;
@@ -131,8 +131,8 @@
             this._characterToolStripMenuItem});
             this._mainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this._mainMenuStrip.Name = "_mainMenuStrip";
-            this._mainMenuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this._mainMenuStrip.Size = new System.Drawing.Size(714, 40);
+            this._mainMenuStrip.Padding = new System.Windows.Forms.Padding(11, 5, 0, 5);
+            this._mainMenuStrip.Size = new System.Drawing.Size(1904, 60);
             this._mainMenuStrip.TabIndex = 4;
             this._mainMenuStrip.Text = "menuStrip1";
             this._mainMenuStrip.MouseDown += new System.Windows.Forms.MouseEventHandler(this._mainMenuStrip_MouseDown);
@@ -146,41 +146,41 @@
             this._addEncounterToolStripMenuItem,
             this._exitToolStripMenuItem});
             this._fileToolStripMenuItem.Name = "_fileToolStripMenuItem";
-            this._fileToolStripMenuItem.Size = new System.Drawing.Size(72, 36);
+            this._fileToolStripMenuItem.Size = new System.Drawing.Size(87, 50);
             this._fileToolStripMenuItem.Text = "&File";
             // 
             // newEncounterToolStripMenuItem
             // 
             this.newEncounterToolStripMenuItem.Name = "newEncounterToolStripMenuItem";
-            this.newEncounterToolStripMenuItem.Size = new System.Drawing.Size(334, 44);
+            this.newEncounterToolStripMenuItem.Size = new System.Drawing.Size(413, 54);
             this.newEncounterToolStripMenuItem.Text = "&New Encounter";
             this.newEncounterToolStripMenuItem.Click += new System.EventHandler(this._newEncounterToolStripMenuItem_Click);
             // 
             // _saveEncounterToolStripMenuItem
             // 
             this._saveEncounterToolStripMenuItem.Name = "_saveEncounterToolStripMenuItem";
-            this._saveEncounterToolStripMenuItem.Size = new System.Drawing.Size(334, 44);
+            this._saveEncounterToolStripMenuItem.Size = new System.Drawing.Size(413, 54);
             this._saveEncounterToolStripMenuItem.Text = "&Save Encounter";
             this._saveEncounterToolStripMenuItem.Click += new System.EventHandler(this._saveEncounterToolStripMenuItem_Click);
             // 
             // _loadEncounterToolStripMenuItem
             // 
             this._loadEncounterToolStripMenuItem.Name = "_loadEncounterToolStripMenuItem";
-            this._loadEncounterToolStripMenuItem.Size = new System.Drawing.Size(334, 44);
+            this._loadEncounterToolStripMenuItem.Size = new System.Drawing.Size(413, 54);
             this._loadEncounterToolStripMenuItem.Text = "&Load Encounter";
             this._loadEncounterToolStripMenuItem.Click += new System.EventHandler(this._loadEncounterToolStripMenuItem_Click);
             // 
             // _addEncounterToolStripMenuItem
             // 
             this._addEncounterToolStripMenuItem.Name = "_addEncounterToolStripMenuItem";
-            this._addEncounterToolStripMenuItem.Size = new System.Drawing.Size(334, 44);
+            this._addEncounterToolStripMenuItem.Size = new System.Drawing.Size(413, 54);
             this._addEncounterToolStripMenuItem.Text = "&Merge Encounter";
             this._addEncounterToolStripMenuItem.Click += new System.EventHandler(this._mergeEncounterToolStripMenuItem_Click);
             // 
             // _exitToolStripMenuItem
             // 
             this._exitToolStripMenuItem.Name = "_exitToolStripMenuItem";
-            this._exitToolStripMenuItem.Size = new System.Drawing.Size(334, 44);
+            this._exitToolStripMenuItem.Size = new System.Drawing.Size(413, 54);
             this._exitToolStripMenuItem.Text = "E&xit";
             this._exitToolStripMenuItem.Click += new System.EventHandler(this._exitToolStripMenuItem_Click);
             // 
@@ -192,34 +192,34 @@
             this._resetInitiativeToolStripMenuItem,
             this._resetHitPointsToolStripMenuItem});
             this._encounterToolStripMenuItem.Name = "_encounterToolStripMenuItem";
-            this._encounterToolStripMenuItem.Size = new System.Drawing.Size(143, 36);
+            this._encounterToolStripMenuItem.Size = new System.Drawing.Size(176, 50);
             this._encounterToolStripMenuItem.Text = "&Encounter";
             // 
             // _rollInitiativeToolStripMenuItem
             // 
             this._rollInitiativeToolStripMenuItem.Name = "_rollInitiativeToolStripMenuItem";
-            this._rollInitiativeToolStripMenuItem.Size = new System.Drawing.Size(343, 44);
+            this._rollInitiativeToolStripMenuItem.Size = new System.Drawing.Size(424, 54);
             this._rollInitiativeToolStripMenuItem.Text = "Roll Only Selected";
             this._rollInitiativeToolStripMenuItem.Click += new System.EventHandler(this._rollSelectedInitiativeToolStripMenuItem_Click);
             // 
             // rollAsGroupToolStripMenuItem
             // 
             this.rollAsGroupToolStripMenuItem.Name = "rollAsGroupToolStripMenuItem";
-            this.rollAsGroupToolStripMenuItem.Size = new System.Drawing.Size(343, 44);
+            this.rollAsGroupToolStripMenuItem.Size = new System.Drawing.Size(424, 54);
             this.rollAsGroupToolStripMenuItem.Text = "Roll As Group";
             this.rollAsGroupToolStripMenuItem.Click += new System.EventHandler(this.rollAsGroupToolStripMenuItem_Click);
             // 
             // _resetInitiativeToolStripMenuItem
             // 
             this._resetInitiativeToolStripMenuItem.Name = "_resetInitiativeToolStripMenuItem";
-            this._resetInitiativeToolStripMenuItem.Size = new System.Drawing.Size(343, 44);
+            this._resetInitiativeToolStripMenuItem.Size = new System.Drawing.Size(424, 54);
             this._resetInitiativeToolStripMenuItem.Text = "&Reset Initiative";
             this._resetInitiativeToolStripMenuItem.Click += new System.EventHandler(this._resetInitiativeToolStripMenuItem_Click);
             // 
             // _resetHitPointsToolStripMenuItem
             // 
             this._resetHitPointsToolStripMenuItem.Name = "_resetHitPointsToolStripMenuItem";
-            this._resetHitPointsToolStripMenuItem.Size = new System.Drawing.Size(343, 44);
+            this._resetHitPointsToolStripMenuItem.Size = new System.Drawing.Size(424, 54);
             this._resetHitPointsToolStripMenuItem.Text = "Reset &Hit Points";
             this._resetHitPointsToolStripMenuItem.Click += new System.EventHandler(this._resetHitPointsToolStripMenuItem_Click);
             // 
@@ -231,34 +231,34 @@
             this.copySelectedToolStripMenuItem,
             this._deleteToolStripMenuItem});
             this._characterToolStripMenuItem.Name = "_characterToolStripMenuItem";
-            this._characterToolStripMenuItem.Size = new System.Drawing.Size(136, 36);
+            this._characterToolStripMenuItem.Size = new System.Drawing.Size(168, 50);
             this._characterToolStripMenuItem.Text = "&Character";
             // 
             // _addToolStripMenuItem
             // 
             this._addToolStripMenuItem.Name = "_addToolStripMenuItem";
-            this._addToolStripMenuItem.Size = new System.Drawing.Size(324, 44);
+            this._addToolStripMenuItem.Size = new System.Drawing.Size(403, 54);
             this._addToolStripMenuItem.Text = "&Add New";
             this._addToolStripMenuItem.Click += new System.EventHandler(this._addToolStripMenuItem_Click);
             // 
             // _updateToolStripMenuItem
             // 
             this._updateToolStripMenuItem.Name = "_updateToolStripMenuItem";
-            this._updateToolStripMenuItem.Size = new System.Drawing.Size(324, 44);
+            this._updateToolStripMenuItem.Size = new System.Drawing.Size(403, 54);
             this._updateToolStripMenuItem.Text = "&Update Selected";
             this._updateToolStripMenuItem.Click += new System.EventHandler(this._updateToolStripMenuItem_Click);
             // 
             // copySelectedToolStripMenuItem
             // 
             this.copySelectedToolStripMenuItem.Name = "copySelectedToolStripMenuItem";
-            this.copySelectedToolStripMenuItem.Size = new System.Drawing.Size(324, 44);
+            this.copySelectedToolStripMenuItem.Size = new System.Drawing.Size(403, 54);
             this.copySelectedToolStripMenuItem.Text = "Copy Selected";
             this.copySelectedToolStripMenuItem.Click += new System.EventHandler(this.copySelectedToolStripMenuItem_Click);
             // 
             // _deleteToolStripMenuItem
             // 
             this._deleteToolStripMenuItem.Name = "_deleteToolStripMenuItem";
-            this._deleteToolStripMenuItem.Size = new System.Drawing.Size(324, 44);
+            this._deleteToolStripMenuItem.Size = new System.Drawing.Size(403, 54);
             this._deleteToolStripMenuItem.Text = "&Delete Selected";
             this._deleteToolStripMenuItem.Click += new System.EventHandler(this._deleteToolStripMenuItem_Click);
             // 
@@ -293,14 +293,14 @@
             this.AC,
             this.notesBox});
             this._dataGridViewManager.DataSource = this.characterBindingSource;
-            this._dataGridViewManager.Location = new System.Drawing.Point(9, 25);
-            this._dataGridViewManager.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this._dataGridViewManager.Location = new System.Drawing.Point(24, 60);
+            this._dataGridViewManager.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this._dataGridViewManager.Name = "_dataGridViewManager";
             this._dataGridViewManager.RowHeadersVisible = false;
             this._dataGridViewManager.RowHeadersWidth = 82;
             this._dataGridViewManager.RowTemplate.Height = 24;
             this._dataGridViewManager.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this._dataGridViewManager.Size = new System.Drawing.Size(696, 322);
+            this._dataGridViewManager.Size = new System.Drawing.Size(1856, 768);
             this._dataGridViewManager.TabIndex = 5;
             this._dataGridViewManager.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this._dataGridViewManager_CellMouseDoubleClick);
             this._dataGridViewManager.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this._dataGridViewManager_ColumnHeaderMouseClick);
@@ -318,7 +318,7 @@
             this.turnBox.MinimumWidth = 10;
             this.turnBox.Name = "turnBox";
             this.turnBox.ReadOnly = true;
-            this.turnBox.Width = 62;
+            this.turnBox.Width = 76;
             // 
             // CurrIni
             // 
@@ -328,7 +328,7 @@
             this.CurrIni.MinimumWidth = 10;
             this.CurrIni.Name = "CurrIni";
             this.CurrIni.Visible = false;
-            this.CurrIni.Width = 200;
+            this.CurrIni.Width = 250;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -336,7 +336,7 @@
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 113;
+            this.nameDataGridViewTextBoxColumn.Width = 140;
             // 
             // iniBonusDataGridViewTextBoxColumn
             // 
@@ -344,7 +344,7 @@
             this.iniBonusDataGridViewTextBoxColumn.HeaderText = "Initiative";
             this.iniBonusDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.iniBonusDataGridViewTextBoxColumn.Name = "iniBonusDataGridViewTextBoxColumn";
-            this.iniBonusDataGridViewTextBoxColumn.Width = 136;
+            this.iniBonusDataGridViewTextBoxColumn.Width = 169;
             // 
             // MaxHP
             // 
@@ -352,7 +352,7 @@
             this.MaxHP.HeaderText = "Max HP";
             this.MaxHP.MinimumWidth = 10;
             this.MaxHP.Name = "MaxHP";
-            this.MaxHP.Width = 133;
+            this.MaxHP.Width = 163;
             // 
             // CurrHP
             // 
@@ -361,7 +361,7 @@
             this.CurrHP.HeaderText = "HP";
             this.CurrHP.MinimumWidth = 10;
             this.CurrHP.Name = "CurrHP";
-            this.CurrHP.Width = 86;
+            this.CurrHP.Width = 106;
             // 
             // AC
             // 
@@ -369,7 +369,7 @@
             this.AC.HeaderText = "AC";
             this.AC.MinimumWidth = 10;
             this.AC.Name = "AC";
-            this.AC.Width = 86;
+            this.AC.Width = 106;
             // 
             // notesBox
             // 
@@ -386,10 +386,10 @@
             // _slideUpBtn
             // 
             this._slideUpBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this._slideUpBtn.Location = new System.Drawing.Point(291, 353);
-            this._slideUpBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this._slideUpBtn.Location = new System.Drawing.Point(776, 842);
+            this._slideUpBtn.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this._slideUpBtn.Name = "_slideUpBtn";
-            this._slideUpBtn.Size = new System.Drawing.Size(80, 19);
+            this._slideUpBtn.Size = new System.Drawing.Size(213, 45);
             this._slideUpBtn.TabIndex = 6;
             this._slideUpBtn.Text = "Slide Up";
             this._slideUpBtn.UseVisualStyleBackColor = true;
@@ -398,10 +398,10 @@
             // _slideDownBtn
             // 
             this._slideDownBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this._slideDownBtn.Location = new System.Drawing.Point(377, 353);
-            this._slideDownBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this._slideDownBtn.Location = new System.Drawing.Point(1005, 842);
+            this._slideDownBtn.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this._slideDownBtn.Name = "_slideDownBtn";
-            this._slideDownBtn.Size = new System.Drawing.Size(80, 19);
+            this._slideDownBtn.Size = new System.Drawing.Size(213, 45);
             this._slideDownBtn.TabIndex = 7;
             this._slideDownBtn.Text = "Slide Down";
             this._slideDownBtn.UseVisualStyleBackColor = true;
@@ -410,10 +410,10 @@
             // _rollInitiativeBtn
             // 
             this._rollInitiativeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this._rollInitiativeBtn.Location = new System.Drawing.Point(626, 353);
-            this._rollInitiativeBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this._rollInitiativeBtn.Location = new System.Drawing.Point(1669, 842);
+            this._rollInitiativeBtn.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this._rollInitiativeBtn.Name = "_rollInitiativeBtn";
-            this._rollInitiativeBtn.Size = new System.Drawing.Size(80, 19);
+            this._rollInitiativeBtn.Size = new System.Drawing.Size(213, 45);
             this._rollInitiativeBtn.TabIndex = 8;
             this._rollInitiativeBtn.Text = "Roll Initiative!";
             this._rollInitiativeBtn.UseVisualStyleBackColor = true;
@@ -422,10 +422,10 @@
             // _copyBtn
             // 
             this._copyBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this._copyBtn.Location = new System.Drawing.Point(130, 353);
-            this._copyBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this._copyBtn.Location = new System.Drawing.Point(347, 842);
+            this._copyBtn.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this._copyBtn.Name = "_copyBtn";
-            this._copyBtn.Size = new System.Drawing.Size(56, 19);
+            this._copyBtn.Size = new System.Drawing.Size(149, 45);
             this._copyBtn.TabIndex = 9;
             this._copyBtn.Text = "Copy";
             this._copyBtn.UseVisualStyleBackColor = true;
@@ -437,9 +437,11 @@
             // 
             // btnResetHp
             // 
-            this.btnResetHp.Location = new System.Drawing.Point(462, 353);
+            this.btnResetHp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnResetHp.Location = new System.Drawing.Point(1232, 842);
+            this.btnResetHp.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnResetHp.Name = "btnResetHp";
-            this.btnResetHp.Size = new System.Drawing.Size(75, 19);
+            this.btnResetHp.Size = new System.Drawing.Size(200, 45);
             this.btnResetHp.TabIndex = 10;
             this.btnResetHp.Text = "Reset Hp";
             this.btnResetHp.UseVisualStyleBackColor = true;
@@ -447,9 +449,9 @@
             // 
             // Manager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 381);
+            this.ClientSize = new System.Drawing.Size(1904, 909);
             this.Controls.Add(this.btnResetHp);
             this.Controls.Add(this._copyBtn);
             this.Controls.Add(this._rollInitiativeBtn);
@@ -462,8 +464,8 @@
             this.Controls.Add(this._addBtn);
             this.Controls.Add(this._mainMenuStrip);
             this.MainMenuStrip = this._mainMenuStrip;
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.MinimumSize = new System.Drawing.Size(652, 398);
+            this.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.MinimumSize = new System.Drawing.Size(1685, 827);
             this.Name = "Manager";
             this.Text = "Encounter Manager";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Manager_MouseDown);

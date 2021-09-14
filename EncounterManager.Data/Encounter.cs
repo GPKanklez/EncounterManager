@@ -19,6 +19,12 @@ namespace EncounterManager.Data
             Characters.RemoveAt(startIndex);
             Characters.Insert(endIndex, character);
         }
+
+        public void ResetHp()
+        {
+            Characters.ForEach(e => e.CurrHP = e.MaxHP);
+        }
+
         /// <summary>
         /// Adds the list of characters from passed encounter to this encounter.
         /// </summary>

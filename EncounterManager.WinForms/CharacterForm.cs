@@ -54,6 +54,7 @@ namespace EncounterManager
         {
             if (_nameBox.Text != "")
             {
+                Character.CurrHP = Character.MaxHP;
                 this.DialogResult = DialogResult.OK;
                 Close();
             }

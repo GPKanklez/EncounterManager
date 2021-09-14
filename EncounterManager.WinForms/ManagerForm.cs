@@ -401,14 +401,9 @@ namespace EncounterManager
                 copyName = selected.Name + "(" + copyNum.ToString() + ")";
             }
 
-            Character copy = new Character()
-            {
-                Name = copyName,
-                IniBonus = selected.IniBonus,
-                CurrIni = 0,
-                MaxHP = selected.MaxHP,
-                CurrHP = selected.MaxHP
-            };
+            var copy = new Character(selected);
+            copy.Name = copyName;
+            copy.CurrIni = 0;
 
             Encounter.Characters.Add(copy);
             RefreshUI();
@@ -445,6 +440,12 @@ namespace EncounterManager
         #endregion
 
         #region Lower Right Buttons
+        private void btnResetHp_Click(object sender, EventArgs e)
+        {
+            Encounter.ResetHp();
+            RefreshUI();
+        }
+
         private void _slideUpBtn_Click( object sender, EventArgs e )
         {
             int index;
@@ -703,5 +704,13 @@ namespace EncounterManager
                     break;
             }
         }
+
+        private void _dataGridViewManager_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            //_dataGridViewManager.ClearSelection();
+            e.Cancel = true;
+            RefreshUI();
+        }
+
     }
 }

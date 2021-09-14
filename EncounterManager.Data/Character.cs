@@ -16,7 +16,7 @@ namespace EncounterManager.Data
             CurrIni = character.CurrIni;
             MaxHP = character.MaxHP;
             CurrHP = character.CurrHP;
-
+            AC = character.AC;
         }
         private string name;
         [Required]
